@@ -436,6 +436,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     locale: {
       type: String,
       required: true
+    },
+    displayIndex: {
+      type: Boolean,
+      required: true
+    },
+    displayDesc: {
+      type: Boolean,
+      required: true
     }
   },
   methods: {
@@ -491,6 +499,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     locale: {
       type: String,
+      required: true
+    },
+    displayIndex: {
+      type: Boolean,
+      required: true
+    },
+    displayDesc: {
+      type: Boolean,
       required: true
     },
     color: {
@@ -701,6 +717,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -750,7 +768,11 @@ var inBrowser = typeof window !== 'undefined';
         return {
           options: {
             locale: 'en', //zh
-            color: ' #f29543'
+            color: ' #f29543',
+            eventOptions: {
+              displayIndex: false,
+              displayDesc: false
+            }
           },
           params: {
             curYear: dateObj.getFullYear(),
@@ -856,7 +878,7 @@ function install(Vue) {
     weekStartOn: 0, // 0 mean sunday
     eventOptions: {
       displayIndex: false,
-      displayDisc: false
+      displayDesc: false
     }
   };
   var Calendar = {
@@ -1005,11 +1027,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "wrapper"
   }, [_c('h3', {
     staticClass: "title"
-  }, [_vm._v(_vm._s(_vm.index + 1) + ". " + _vm._s(_vm.event.title))]), _vm._v(" "), _c('p', {
+  }, [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title))]), _vm._v(" "), _c('p', {
     staticClass: "time"
-  }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))]), _vm._v(" "), _c('p', {
+  }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))]), _vm._v(" "), (_vm.displayDesc) ? _c('p', {
     staticClass: "desc"
-  }, [_vm._v(_vm._s(_vm.event.desc))])])
+  }, [_vm._v(_vm._s(_vm.event.desc))]) : _vm._e()])
 },staticRenderFns: []}
 
 /***/ }),
@@ -1032,7 +1054,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "event": event,
         "index": index,
-        "locale": _vm.locale
+        "locale": _vm.locale,
+        "displayIndex": _vm.displayIndex,
+        "displayDesc": _vm.displayDesc
       }
     })], 1)
   }))], 2)])
@@ -1060,6 +1084,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "title": _vm.title,
       "dayEvents": _vm.selectedDayEvents,
       "locale": _vm.calendarOptions.options.locale,
+      "displayIndex": _vm.calendarOptions.options.eventOptions.displayIndex,
+      "displayDesc": _vm.calendarOptions.options.eventOptions.displayDesc,
       "color": _vm.calendarOptions.options.color
     }
   }, [_vm._t("default", null, {

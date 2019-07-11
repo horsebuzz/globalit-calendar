@@ -69,7 +69,7 @@ export default {
             color: ' #f29543',
             eventOptions: {
               displayIndex: false,
-              displayDisc: false
+              displayDesc: false
             }
           },
           params: {
