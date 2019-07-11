@@ -1,7 +1,9 @@
 <template>
-  <div class="wrapper">
-    <h3 class="title"><span v-if="displayIndex">{{index+1}}. </span>{{event.title}}</h3>
-    <p class="time">{{dateTimeFormatter(Date.parse(new Date(event.date)),i18n[locale].fullFormat)}}</p>
+  <div>
+    <p class="title">
+      <span v-if="displayIndex">{{index+1}}. </span>{{event.title}}
+      <span class="time">{{dateTimeFormatter(Date.parse(new Date(event.date)),i18n[locale].fullFormat)}}</span>
+    </p>
     <p v-if="displayDesc" class="desc">{{event.desc}}</p>
   </div>
 </template>

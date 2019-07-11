@@ -414,6 +414,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -872,7 +874,7 @@ function install(Vue) {
   var inBrowser = typeof window !== 'undefined';
   var dateObj = new Date();
   var DEFAULT_OPTION = {
-    locale: 'zh', // en
+    locale: 'en', // en
     color: ' #7CC140',
     className: 'selected-day',
     weekStartOn: 0, // 0 mean sunday
@@ -1023,13 +1025,11 @@ module.exports = Component.exports
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "wrapper"
-  }, [_c('h3', {
+  return _c('div', [_c('p', {
     staticClass: "title"
-  }, [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title))]), _vm._v(" "), _c('p', {
+  }, [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title) + "\n    "), _c('span', {
     staticClass: "time"
-  }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))]), _vm._v(" "), (_vm.displayDesc) ? _c('p', {
+  }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))])]), _vm._v(" "), (_vm.displayDesc) ? _c('p', {
     staticClass: "desc"
   }, [_vm._v(_vm._s(_vm.event.desc))]) : _vm._e()])
 },staticRenderFns: []}

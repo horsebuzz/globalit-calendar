@@ -335,8 +335,8 @@ export default {
       font-size: 22px;
     }
     .event-item{
-      padding: 5px 20px;
-      margin-top: 15px;
+      padding: 5px 15px;
+      margin-top: 10px;
       box-shadow: 0 3px 11px 2px rgba(0,0,0,.1);
       background-color: #fff;
       border-radius: 5px;
@@ -346,17 +346,16 @@ export default {
         margin-top: 0;
       }
       .title{
-        height: 40px;
-        line-height: 40px;
+        line-height: 25px;
         color: #323232;
         font-size: 16px;
+        text-align:left;
       }
       .time{
-        position: absolute;
-        right: 30px;
         top: 17px;
         color: #9b9b9b;
         font-size: 14px;
+        float:right;
       }
       .desc{
         border-top: 1px solid #f2f2f2;
