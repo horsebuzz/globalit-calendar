@@ -416,6 +416,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -440,6 +447,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       required: true
     },
     displayIndex: {
+      type: Boolean,
+      required: true
+    },
+    displayHref: {
       type: Boolean,
       required: true
     },
@@ -504,6 +515,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       required: true
     },
     displayIndex: {
+      type: Boolean,
+      required: true
+    },
+    displayHref: {
       type: Boolean,
       required: true
     },
@@ -721,6 +736,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -880,7 +896,8 @@ function install(Vue) {
     weekStartOn: 0, // 0 mean sunday
     eventOptions: {
       displayIndex: false,
-      displayDesc: false
+      displayDesc: false,
+      displayHref: true
     }
   };
   var Calendar = {
@@ -1029,7 +1046,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "wrapper"
   }, [_c('p', {
     staticClass: "title"
-  }, [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title) + "\n    "), _c('span', {
+  }, [(_vm.event.link && _vm.displayHref) ? _c('span', [_c('a', {
+    attrs: {
+      "href": _vm.event.link
+    }
+  }, [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title) + "\n      ")])]) : _c('span', [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title) + "\n    ")]), _vm._v(" "), _c('span', {
     staticClass: "time"
   }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))])]), _vm._v(" "), (_vm.displayDesc) ? _c('p', {
     staticClass: "desc"
@@ -1057,6 +1078,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "event": event,
         "index": index,
         "locale": _vm.locale,
+        "displayHref": _vm.displayHref,
         "displayIndex": _vm.displayIndex,
         "displayDesc": _vm.displayDesc
       }
@@ -1088,6 +1110,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "locale": _vm.calendarOptions.options.locale,
       "displayIndex": _vm.calendarOptions.options.eventOptions.displayIndex,
       "displayDesc": _vm.calendarOptions.options.eventOptions.displayDesc,
+      "displayHref": _vm.calendarOptions.options.eventOptions.displayHref,
       "color": _vm.calendarOptions.options.color
     }
   }, [_vm._t("default", null, {
