@@ -1,5 +1,5 @@
 {
-  "name": "vue-event-calendar-demo",
+  "name": "globalit-calendar-demo",
   "description": "A simple calendar to mark events for Vue2 ",
   "version": "1.0.0",
   "author": "Geoff <geoffzhu1992@gmail.com>",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.5.3",
-    "vue-event-calendar": "^1.5.1"
+    "globalit-event-calendar": "^1.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.0.0-beta.31",

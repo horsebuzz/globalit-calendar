@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import 'vue-event-calendar/dist/style.css'
+import 'globalit-event-calendar/dist/style.css'
 // import vueEventCalendar from 'vue-event-calendar'
 import vueEventCalendar from '../../dist/index.js'
 
-Vue.use(vueEventCalendar, {locale: 'en', weekStartOn: 1})
+Vue.use(vueEventCalendar, {locale: 'en', weekStartOn: 0})
 
 window.Vue = Vue
 new Vue({

@@ -11,6 +11,8 @@
       :title="title"
       :dayEvents="selectedDayEvents"
       :locale="calendarOptions.options.locale"
+      :displayIndex="calendarOptions.options.eventOptions.displayIndex"
+      :displayDesc="calendarOptions.options.eventOptions.displayDesc"
       :color="calendarOptions.options.color">
       <slot :showEvents="selectedDayEvents.events"></slot>
     </cal-events>
@@ -64,7 +66,11 @@ export default {
         return {
           options: {
             locale: 'en', //zh
-            color: ' #f29543'
+            color: ' #f29543',
+            eventOptions: {
+              displayIndex: false,
+              displayDisc: false
+            }
           },
           params: {
               curYear: dateObj.getFullYear(),
@@ -344,7 +350,6 @@ export default {
         line-height: 40px;
         color: #323232;
         font-size: 16px;
-        border-bottom: 1px solid #f2f2f2;
       }
       .time{
         position: absolute;
@@ -354,6 +359,7 @@ export default {
         font-size: 14px;
       }
       .desc{
+        border-top: 1px solid #f2f2f2;
         color: #9b9b9b;
         font-size: 14px;
         padding: 7px 0;

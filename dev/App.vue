@@ -7,7 +7,7 @@
       @day-changed="handleDayChanged"
       @month-changed="handleMonthChanged"
     ></vue-event-calendar>
-    <h2 class="t-center">Custom template</h2>
+    <h2 class="t-center mt150">Custom template</h2>
     <vue-event-calendar :events="demoEvents">
       <template scope="props">
         <div v-for="(event, index) in props.showEvents" class="event-item">
@@ -26,30 +26,6 @@ export default {
   data () {
     return {
       demoEvents: [{
-        date: `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`,
-        title: 'Title-1',
-        desc: 'longlonglong description'
-      },{
-        date: `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`,
-        title: 'Title-1',
-        desc: 'longlonglong description'
-      },{
-        date: `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`,
-        title: 'Title-1',
-        desc: 'longlonglong description'
-      },{
-        date: `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`,
-        title: 'Title-1',
-        desc: 'longlonglong description'
-      },{
-        date: `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`,
-        title: 'Title-1',
-        desc: 'longlonglong description'
-      },{
-        date: `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`,
-        title: 'Title-1',
-        desc: 'longlonglong description'
-      },{
         date: `${today.getFullYear()}/${today.getMonth() + 1}/15`,
         title: 'Title-1',
         desc: 'longlonglong description'
@@ -65,8 +41,10 @@ export default {
   },
   methods: {
     handleDayChanged (data) {
+      console.log('date-changed', data)
     },
     handleMonthChanged (data) {
+      console.log('month-changed', data)
     }
   }
 }
@@ -103,5 +81,8 @@ a {
 .t-center{
   text-align: center;
   margin: 20px;
+}
+.mt150{
+  margin-top: 150px;
 }
 </style>

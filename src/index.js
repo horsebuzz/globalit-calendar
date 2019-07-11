@@ -8,9 +8,13 @@ function install (Vue, options = {}) {
   let dateObj = new Date()
   const DEFAULT_OPTION = {
     locale: 'zh', // en
-    color: ' #f29543',
+    color: ' #7CC140',
     className:'selected-day',
-    weekStartOn: 0 // 0 mean sunday
+    weekStartOn: 0, // 0 mean sunday
+    eventOptions: {
+      displayIndex: false,
+      displayDesc: false
+    }
   }
   let Calendar = {
     $vm: null,
