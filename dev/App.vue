@@ -31,11 +31,13 @@ export default {
         desc: 'longlonglong description'
       },{
         date: `${today.getFullYear()}/${today.getMonth() + 1}/24`,
-        title: '2019 NNWSJC Winter Championships & Jumping NSW Indoor Show Jumping Titles'
+        title: '2019 NNWSJC Winter Championships & Jumping NSW Indoor Show Jumping Titles',
+        link : 'https://google.com'
       },{
         date: `${today.getFullYear()}/${today.getMonth() === 11 ? 1 : today.getMonth() + 2}/06`,
         title: 'Title-3',
-        desc: 'description'
+        desc: 'description',
+        link : 'https://google.com'
       }]
     }
   },

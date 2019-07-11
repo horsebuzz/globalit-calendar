@@ -13,6 +13,7 @@
       :locale="calendarOptions.options.locale"
       :displayIndex="calendarOptions.options.eventOptions.displayIndex"
       :displayDesc="calendarOptions.options.eventOptions.displayDesc"
+      :displayHref="calendarOptions.options.eventOptions.displayHref"
       :color="calendarOptions.options.color">
       <slot :showEvents="selectedDayEvents.events"></slot>
     </cal-events>

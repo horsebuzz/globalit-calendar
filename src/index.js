@@ -13,7 +13,8 @@ function install (Vue, options = {}) {
     weekStartOn: 0, // 0 mean sunday
     eventOptions: {
       displayIndex: false,
-      displayDesc: false
+      displayDesc: false,
+      displayHref: true,
     }
   }
   let Calendar = {

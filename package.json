@@ -1,7 +1,7 @@
 {
   "name": "globalit-event-calendar",
   "description": "A simple calendar to mark events for Vue2",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "horsebuzz <bsuthar@horsebuzz.com>",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",

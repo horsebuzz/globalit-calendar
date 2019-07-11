@@ -6,7 +6,7 @@
     <div class="cal-events">
       <slot>
         <div v-for="(event, index) in events" class="event-item" :key="index">
-          <cal-event-item :event="event" :index="index" :locale="locale" :displayIndex="displayIndex" :displayDesc="displayDesc"></cal-event-item>
+          <cal-event-item :event="event" :index="index" :locale="locale" :displayHref="displayHref" :displayIndex="displayIndex" :displayDesc="displayDesc"></cal-event-item>
         </div>
       </slot>
     </div>
@@ -38,6 +38,10 @@ export default {
       required: true
     },
     displayIndex: {
+      type: Boolean,
+      required: true
+    },
+    displayHref: {
       type: Boolean,
       required: true
     },
