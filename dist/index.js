@@ -1025,7 +1025,9 @@ module.exports = Component.exports
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('p', {
+  return _c('div', {
+    staticClass: "wrapper"
+  }, [_c('p', {
     staticClass: "title"
   }, [(_vm.displayIndex) ? _c('span', [_vm._v(_vm._s(_vm.index + 1) + ". ")]) : _vm._e(), _vm._v(_vm._s(_vm.event.title) + "\n    "), _c('span', {
     staticClass: "time"

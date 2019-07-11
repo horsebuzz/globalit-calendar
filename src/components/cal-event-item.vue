@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <p class="title">
       <span v-if="displayIndex">{{index+1}}. </span>{{event.title}}
       <span class="time">{{dateTimeFormatter(Date.parse(new Date(event.date)),i18n[locale].fullFormat)}}</span>
