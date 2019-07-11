@@ -1114,7 +1114,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "color": _vm.calendarOptions.options.color
     }
   }, [_vm._t("default", null, {
-    showEvents: _vm.selectedDayEvents.events
+    "showEvents": _vm.selectedDayEvents.events
   })], 2)], 1)
 },staticRenderFns: []}
 
@@ -1152,7 +1152,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       key: dayIndex,
       staticClass: "item"
     }, [_vm._v("\n        " + _vm._s(_vm.i18n[_vm.calendar.options.locale].dayNames[(dayIndex + _vm.calendar.options.weekStartOn) % 7]) + "\n      ")])
-  })), _vm._v(" "), _c('div', {
+  }), 0), _vm._v(" "), _c('div', {
     staticClass: "dates"
   }, _vm._l((_vm.dayList), function(date) {
     return _c('div', {
@@ -1169,7 +1169,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }),
       on: {
         "click": function($event) {
-          _vm.handleChangeCurday(date)
+          return _vm.handleChangeCurday(date)
         }
       }
     }, [_vm._v("\n          " + _vm._s(date.status ? date.date.split('/')[2] : ' '))]), _vm._v(" "), (date.status ? (_vm.today == date.date) : false) ? _c('span', {
@@ -1185,7 +1185,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       })
     }) : _vm._e()])
     var _obj;
-  }))])])
+  }), 0)])])
 },staticRenderFns: []}
 
 /***/ })
